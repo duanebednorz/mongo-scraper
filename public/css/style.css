@@ -1,0 +1,15 @@
+.nav-wrapper {
+    background-color:orange;
+}
+a#save {
+    margin-left: 10px;
+}
+.card-action a {
+    color: red !important;
+}
+body {
+    background-image: url("../images/pixabay.png");
+}
+.delete-button {
+    margin-left: 10px;
+}
