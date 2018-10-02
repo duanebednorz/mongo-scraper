@@ -18,8 +18,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("./public"));
 
+
+var dbConnect = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.Promise = Promise;
-var dbConnect = process.env.MONGODB_URI || "mongodb://localhost/scrape_db";
 if(process.env.MONGODB_URI) {
     mongoose.connect(process.env.MONGODB_URI)
 } else {
