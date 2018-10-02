@@ -7,9 +7,7 @@ var Save = require("../models/Save");
 module.exports = function (app) {
     app.get("/scrape", function (req, res) {
         request("https://www.nytimes.com/", function (error, response, html) {
-
             var $ = cheerio.load(html);
-
             $("article.story").each(function (i, element) {
                 var result = {};
                 result.summary = $(element).children("p.summary").text();
@@ -35,6 +33,7 @@ module.exports = function (app) {
             res.json({
                 "code": "success"
             });
+
         });
     });
 
@@ -84,8 +83,11 @@ module.exports = function (app) {
         result.byline = req.body.byline;
         result.title = req.body.title;
         result.link = req.body.link;
+
         var entry = new Save(result);
+
         entry.save(function (err, doc) {
+
             if (err) {
                 console.log(err);
                 res.json(err);
@@ -93,6 +95,7 @@ module.exports = function (app) {
                 res.json(doc);
             }
         });
+
     });
 
     app.delete("/delete", function (req, res) {
@@ -101,6 +104,7 @@ module.exports = function (app) {
         Save.findOneAndRemove({
             '_id': req.body._id
         }, function (err, doc) {
+
             if (err) {
                 console.log("error:", err);
                 res.json(err);
@@ -158,7 +162,6 @@ module.exports = function (app) {
         Note.findOneAndRemove({
             '_id': req.body._id
         }, function (err, doc) {
-
             if (err) {
                 console.log("error:", err);
                 res.json(err);
