@@ -43,7 +43,6 @@ function displaySaved() {
             cardActionDiv.append(deleteArticle);
             mainDiv.append(cardContentDiv);
             mainDiv.append(cardActionDiv);
-
             $("#nyt-" + String(i % 3)).append(mainDiv);
         }
     });
@@ -68,7 +67,6 @@ $(document).ready(function () {
     $('.slider').slider();
     $(".button-collapse").sideNav();
     $('.modal').modal();
-
     $(document).on('click', '.save-button', function () {
         var thisId = $(this).attr("id");
         var summary = $("#summary-" + thisId).text();
@@ -130,7 +128,6 @@ $(document).ready(function () {
                 hli.addClass("collection-header")
                 hli.text("Notes");
                 noteList.append(hli);
-
                 for (let i = 0; i < data.length; i++) {
                     let ili = $("<li>");
                     ili.attr("id", data[i]._id);
@@ -160,7 +157,6 @@ $(document).ready(function () {
         var thisId = $(this).attr("data-id");
         var text = $("#textarea1").val();
         console.log(thisId);
-
         $.ajax({
             type: "POST",
             url: "/notes",

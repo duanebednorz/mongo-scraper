@@ -3,16 +3,26 @@
 
 <head>
     <title>Mongo Scraper</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../public/css/style.css" media="screen" title="no title" charset="utf-8">
+
     <script type="text/javascript" src="../public/javascript/home.js"></script>
     <script type="text/javascript" src="../public/javascript/save.js"></script>
 </head>
 
 <body>
+
     <div class="container-fluid">
         <nav>
             <div class="nav-wrapper">
@@ -23,7 +33,6 @@
                     <li><a href="#" onclick="displaySaved()">Saved Articles</a></li>
                     <button data-target="scrape-article" class="btn waves-effect waves-light black modal-trigger"
                         onclick="displayScrape()">Scrape Articles</button>
-
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="#">Home</a></li>
@@ -33,39 +42,34 @@
                 </ul>
             </div>
         </nav>
-
         <div class="slider">
             <ul class="slides">
                 <li>
                     <img src="https://www.nytco.com/wp-content/themes/nytco/images/nytco/NYT-wordmark.png">
-
                     <div class="caption center-align">
                         <h3>Mongo Scraper</h3>
-                        <h5 class="light grey-text text-lighten-3">New York Times</h5>
+                        <h5>New York Times</h5>
                     </div>
                 </li>
                 <li>
                     <img src="../public/images/nyt1.png">
-
                     <div class="caption left-align">
-                        <h3 class="white-text">New York Times</h3>
-                        <h5 class="light white-text">View Your Favorite Articles......</h5>
+                        <h3>New York Times</h3>
+                        <h5>View Your Favorite Articles......</h5>
                     </div>
                 </li>
                 <li>
                     <img src="../public/images/nyt2.png">
-
                     <div class="caption right-align">
                         <h3>New York Times</h3>
-                        <h5 class="light grey-text text-lighten-3">Save Your Favorite Articles!!</h5>
+                        <h5>Save Your Favorite Articles!!</h5>
                     </div>
                 </li>
                 <li>
                     <img src="../public/images/nyt3.png">
-
                     <div class="caption center-align">
                         <h3>New York Ttime</h3>
-                        <h5 class="light grey-text text-lighten-3">One Click To Scrape Your Favorite Article.......</h5>
+                        <h5>One Click To Scrape Your Favorite Article..</h5>
                     </div>
                 </li>
             </ul>
@@ -78,18 +82,16 @@
             <div class="col s12 m4 l4" id="nyt-2">
             </div>
         </div>
-
         <div id="scrape-article" class="modal">
             <div class="modal-content">
                 <h4>Number of Articles Scraped:</h4>
                 <h4 id="total-number"></h4>
             </div>
             <div class="modal-footer">
-                <a href="#" class="modal-action modal-close waves-effect waves-green btn">Close</a>
+                <a href="#" class="modal-action modal-close waves-effect waves-blue btn">Close</a>
             </div>
         </div>
     </div>
-
     <div id="notes" class="modal">
         <div class="modal-content">
             <form>
@@ -100,10 +102,10 @@
             </form>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="savenote">Save Note</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-blue btn" id="savenote">Save Note</a>
         </div>
     </div>
-
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 
 </html>
